@@ -1,6 +1,5 @@
 import { Alert, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import BackgroundLogo from '@/components/svg/BackgroundLogo'
 import IntroduceMan from '@/components/svg/IntruduceMan'
 import LogoCloud from '@/components/LogoCloud'
 import ButtonComponent from '@/components/ButtonComponent'
@@ -30,7 +29,7 @@ const HomeSreen = () => {
             <ButtonComponent
                 text="Get Started"
                 onPress={() => {
-                    router.push('/(auth)/login')
+                    router.push('/(auth)/register')
                 }}
             />
         </View>

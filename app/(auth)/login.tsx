@@ -7,7 +7,7 @@ const LoginPage = () => {
     <React.Fragment>
       <Header />
       <SafeAreaView style={{width: '95%', marginHorizontal:24, position:'absolute', top: 180, flex:1,}}>
-        <Text>Login</Text>
+        <Text style={{textAlign:'center'}}>Login</Text>
       </SafeAreaView>
     </React.Fragment>
   )
