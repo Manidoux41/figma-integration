@@ -6,7 +6,7 @@ import { HeaderTitle } from '@react-navigation/elements'
 export default function TabLayout() {
   return (
     <Stack>
-        <Stack.Screen name='home' options={{
+        <Stack.Screen name='index' options={{
             headerTitle: 'HomePage',
             headerStyle: {
                 backgroundColor: 'red'
@@ -14,6 +14,7 @@ export default function TabLayout() {
             headerTintColor: 'white',
             headerShown: false
         }}/>
+        
     </Stack>
   )
 }
