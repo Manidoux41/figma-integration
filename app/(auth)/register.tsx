@@ -1,7 +1,9 @@
-import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Alert, Button, FlatList, Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import Header from '@/components/layouts/Header'
 import InputTextField from '@/components/InputTextField'
+import ButtonComponent from '@/components/ButtonComponent'
+import { useRouter } from 'expo-router'
 
 const RegisterPage = () => {
   const [name, setName] = useState('')
@@ -35,6 +37,8 @@ const RegisterPage = () => {
     }
   ]
 
+  const router = useRouter()
+
   return (
     <React.Fragment>
       <Header />
@@ -56,6 +60,13 @@ const RegisterPage = () => {
           style={{display:'flex', marginTop:40, marginHorizontal: 24,
  }}
         />
+        <ButtonComponent onPress={() => Alert.alert('Button clicked')} text='Register' />
+        <View style={{display: 'flex', flexDirection:'row', flex:1, justifyContent:'center', alignItems:'center'}}>
+          <Text style={{fontSize: 20}}>Already have an account? </Text>
+          <Pressable onPress={() => router.push('/(auth)/login')}>
+            <Text style={{fontSize:20, fontWeight: 'bold', color:'#5219AF'}}>Sign In</Text>
+          </Pressable>
+        </View>
       </SafeAreaView>
     </React.Fragment>
   )

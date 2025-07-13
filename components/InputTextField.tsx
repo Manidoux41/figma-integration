@@ -13,7 +13,7 @@ export default function InputTextField({ placeholder, value, onChangeText } : In
         placeholder={placeholder} 
         value={value} 
         onChangeText={onChangeText}
-        style={{ marginBottom:40 }}
+        style={{ marginBottom:40, width: '100%', height: 51, backgroundColor: '#D9D9D9', borderRadius: 10, padding:15, color:"#000000", fontSize:20 }}
     />
   )
 }
